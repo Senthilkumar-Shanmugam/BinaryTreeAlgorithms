@@ -4,7 +4,7 @@ public class BoundaryTreeTraversal implements Traversal {
 	public static void main(String... str) {
 		BinaryTree btree = new BinaryTree();
 
-		btree.addNode(btree.getRoot(), 100);
+		/*btree.addNode(btree.getRoot(), 100);
 		btree.addNode(btree.getRoot(), 50);
 		btree.addNode(btree.getRoot(), 150);
 		btree.addNode(btree.getRoot(), 25);
@@ -14,8 +14,27 @@ public class BoundaryTreeTraversal implements Traversal {
 		btree.addNode(btree.getRoot(), 30);
 		btree.addNode(btree.getRoot(), 70);
 		btree.addNode(btree.getRoot(), 80);
-		btree.addNode(btree.getRoot(), 35);
-		new BoundaryTreeTraversal().boundaryTraversal(btree.getRoot());
+		btree.addNode(btree.getRoot(), 35);*/
+		
+		BinaryTree.Node root20 = new BinaryTree.Node.NodeBuilder().data(20).build();
+		BinaryTree.Node node8 = new BinaryTree.Node.NodeBuilder().data(8).build();
+		BinaryTree.Node node22= new BinaryTree.Node.NodeBuilder().data(22).build();
+	    root20.setLeft(node8);
+	    root20.setRight(node22);
+	    BinaryTree.Node node4 = new BinaryTree.Node.NodeBuilder().data(4).build();
+		BinaryTree.Node node12= new BinaryTree.Node.NodeBuilder().data(12).build();
+		node8.setLeft(node4);
+		node8.setRight(node12);
+		
+		BinaryTree.Node node10 = new BinaryTree.Node.NodeBuilder().data(10).build();
+		BinaryTree.Node node14= new BinaryTree.Node.NodeBuilder().data(14).build();
+		
+	    node12.setLeft(node10);
+	    node12.setRight(node14);
+	    
+		BinaryTree.Node node25= new BinaryTree.Node.NodeBuilder().data(25).build();
+	    node22.setRight(node25);
+		new BoundaryTreeTraversal().boundaryTraversal(root20);
 	}
 
 	@Override

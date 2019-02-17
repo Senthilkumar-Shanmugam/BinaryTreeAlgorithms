@@ -1,6 +1,7 @@
 package com.learn.btree;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
@@ -10,6 +11,7 @@ public class BinaryTree implements Traversal{
 	
 	@Data
 	@AllArgsConstructor
+	@Builder
 	static class Node{
 		private int data;
 		private Node left;

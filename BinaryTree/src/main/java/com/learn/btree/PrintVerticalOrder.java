@@ -43,7 +43,7 @@ public class PrintVerticalOrder {
 		}
 	}
 
-	private static void updateDistanceMap(Node node,int distance) {
+	private static void updateDistanceMap(Node node,int distance) { //preorder traversal
 		
 		if (node == null) return;
 		

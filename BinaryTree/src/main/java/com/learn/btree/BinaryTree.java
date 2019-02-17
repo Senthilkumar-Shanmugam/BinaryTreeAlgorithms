@@ -11,17 +11,33 @@ public class BinaryTree implements Traversal{
 	@Data
 	@AllArgsConstructor
 	static class Node{
-		private String data;
+		private int data;
 		private Node left;
 		private Node right;
 	}
 	
-	private void addNode(Node node) {
-		
+	public void addNode(Node rootNode,int data) {
+		if(rootNode == null) {
+			root = new Node(data,null,null);
+		}else {
+			if(data > rootNode.getData()) {
+				if(rootNode.getRight()!= null)
+					addNode(rootNode.getRight(),data);
+				else {
+					rootNode.setRight(new Node(data,null,null));
+				}
+				
+			}else if(data < rootNode.getData()) {
+				if(rootNode.getLeft() !=null)
+					addNode(rootNode.getLeft(),data);
+				else
+					rootNode.setLeft(new Node(data,null,null));
+			}
+		}
 	}
 	
 	
-	private void removeNode(Node node) {
+	public void removeNode(Node root) {
 		
 	}
 
